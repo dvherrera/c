@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+int esPrimo(int);
+
 int main(void) {
 
    int numero;
@@ -7,12 +9,22 @@ int main(void) {
    printf("Introduzca un numero por teclado:\n");
    scanf("%d",&numero);
 
-   for(i=2;i<numero/2;i++) {
-      if(numero%i==0) {
-         printf("El numero no es primo");
-         return 0;
-      };
+   if(esPrimo(numero)) {
+      printf("\nEl numero %d es primo",numero);
+      return 0;
+   } else {
+      printf("\nEl numero %d no es primo",numero);
+      return 0;
    }
-   printf("El numero es primo");
-	
+}
+
+int esPrimo(int numero) {
+   if (numero==0 || numero==1 || numero==4)
+      return 0;
+   for(int i = 2; i < numero/2; i++) {
+      if (numero % i == 0)
+         return 0;
+   }
+   return 1;
+
 }
