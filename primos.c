@@ -9,6 +9,11 @@ int main(void) {
    printf("Introduzca un numero por teclado:\n");
    scanf("%d",&numero);
 
+   if(numero<0){
+      printf("\nEste programa solo es valido para numeros positivos");
+      return 0;
+   }
+
    if(esPrimo(numero)) {
       printf("\nEl numero %d es primo",numero);
       return 0;
