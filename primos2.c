@@ -24,20 +24,15 @@ int main(void) {
 }
 
 int esPrimo(int numero) {
+   int i=2;
    if (numero==0 || numero==1)
       return 0;
-   printf("\nComprobamos hasta el numero %d",numero/2);
-   int i=2;
    do {
       if(numero%i==0)
          return 0;
       i++;
    } while(i < numero/2);
 
-   /*for(int i = 2; i < numero/2; i++) {
-      if (numero % i == 0)
-         return 0;
-   }*/
    return 1;
 
 }
