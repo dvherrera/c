@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(void) {
-	int h,m,s;
+	int h=0,m=0,s=0;
 	printf("Introduzca horas, minutos y segundos separados por espacio\n");
 	scanf("%d %d %d",&h,&m,&s);
 	printf("%d %d %d\n",h,m,s);
